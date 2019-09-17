@@ -46,3 +46,6 @@ console.log(convertToString);
   cost = amount * 2;
   console.log(cost); // 199.98
 }
+
+//! Conditionals
+//*

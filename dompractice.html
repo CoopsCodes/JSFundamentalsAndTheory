@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script type="text/javascript" src="dompractice.js"></script>
     <title>DOM Title</title>
   </head>
   <body>
@@ -13,5 +14,31 @@
       This is another paragraph within the Document but I contain a link to a
       website <a href="https://cooper-codes.dev/">Portfolio Link</a>.
     </p>
+    <h3>Here is a cat image</h3>
+    <p>
+      <img
+        id="cat"
+        src="http://www.rspcasa.org.au/wp-content/uploads/2019/01/Adopt-a-cat-or-kitten-from-RSPCA.jpg"
+      />
+    </p>
+    <p>One</p>
+    <p>Two</p>
+    <p>
+      Three, this is the 5th p element in the document but I get moved because
+      of insertBefore
+    </p>
   </body>
 </html>
+<script>
+  // This grabs the first [0] a element in the document body
+  let link = document.body.getElementsByTagName("a")[0];
+  console.log(`Grabbing the first 'a' element`, link);
+
+  // Grabbing the cat image but the element id
+  // let cat = document.getElementById("cat");
+  // console.log("cat source", cat.src);
+
+  //Changing the document changeParagraph grabs all p elements
+  let changeParagraph = document.body.getElementsByTagName("p");
+  document.body.insertBefore(changeParagraph[5], changeParagraph[0]);
+</script>
